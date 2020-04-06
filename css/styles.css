@@ -1,0 +1,185 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+}
+
+h1,h2,h3,h4,h5,h6{       /* It's a type of combining selectors with just a ','*/
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+p{
+color: #8f8f8f;
+}
+
+/* Headings */
+
+.big-heading{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+.section-heading{
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/* Containers */
+
+.container-fluid{
+  padding: 7% 15%;
+}
+
+/* Sections */
+
+.coloured-section{
+  background-color: #ff4c68;
+  color: #fff;
+}
+
+.white-section{
+  background-color: #fff;
+}
+
+/* Navigation bar */
+
+.navbar{
+  padding: 0 0 4.5rem;
+}
+
+.navbar-brand{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item{
+  padding: 0 18px;
+}
+
+.nav-link{
+  font-size:1.2rem;
+  font-weight: 100;
+}
+
+/* Download Buttons */
+
+.download-button{
+  margin: 5% 3% 5% 0;
+}
+
+
+/* Titile Section */
+
+/* Here the title id is used to specify which container fluid we are targetting as we have incorporated many of them in our html and this is known as hierarchical selectorsas it has space, if no space was present then it would be combined selector and the order of elements will be opposite as that is read from left to right. The hierarchy is read from right to left i.e the .container-fluid inside the #title. The one on the right is the child and the one on the left is the parent. */
+#title .container-fluid {
+  padding: 3% 15% 7%;
+  text-align: left;
+}
+
+/* Title Image */
+
+.title-image{
+  width: 60%;
+  transform: rotate(25deg); /* We use transform:rotate() function to give an angle to our image */
+  position: absolute; /* By setting the position absolute we take the image out of the html order so it can stack on top of title section also psition has to be specified mandatorily for z-index to work*/
+  right: 28%; /* We specify the image to be 28% from the right so there is gap between the image and our text */
+}
+
+/* Features Styling */
+
+#features{
+  position: relative; /* By setting the position absolute we can keep the image in the html order*/
+  z-index: 1; /* By default any object has z-index value of 0, we change it to 1 to push it up towards the user or we change it to -1 to push it away from the user. Also here the stacking order dictates that if both the sections have their position specified and both donot have a z-index value the lower section will still be on top i.e. we donot need to give any z-index value here and the answer will be the same.*/
+}
+
+.feature-title{
+  font-size: 1.5rem;
+}
+
+.feature-box{
+  padding: 5%;
+}
+
+.icon{
+  color: #ef8172;
+  margin-bottom: 1rem;
+}
+
+.icon:hover{
+  color: #ff4c68;
+}
+
+/* Testimonial Section */
+
+#testimonials{
+  background-color: #ef8172;  /* In both here as well as down in press section the baackground colour of id is given prefference as that is the order i.e id>class>tags */
+}
+
+.testimonial-text{
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.testimonial-image{
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+
+/* Press Section */
+
+#press{
+  background-color: #ef8172;
+  padding-bottom: 3%;
+}
+
+.press-logo{
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+/* Pricing Section */
+
+#pricing{
+  padding: 100px;
+}
+
+.price-text{
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.pricing-column{
+  padding: 3% 2%;
+}
+
+
+/* Footer */
+
+#footer{
+  background-color: #fff;
+}
+
+
+.footer-icons{
+  margin: 20px 10px;
+}
+
+/* Media Query for responsiveness */
+
+@media (max-width:1028px) { /* We declare @@media query where we set a query and if said query is true then we make use regular css coding to change values as we desire it*/
+
+  #title{
+    text-align: center;
+  }
+
+  .title-image{
+    position: static;
+    transform: rotate(0deg);
+  }
+
+}
