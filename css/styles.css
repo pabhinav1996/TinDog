@@ -173,10 +173,15 @@ color: #8f8f8f;
 
 @media (max-width:1028px) { /* We declare @@media query where we set a query and if said query is true then we make use regular css coding to change values as we desire it*/
 
-  #title{
+  #title .container-fluid{
     text-align: center;
+
   }
 
+  .navbar{
+    text-align: right;
+  }
+  
   .title-image{
     position: static;
     transform: rotate(0deg);
